@@ -1,19 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<html class="no-js" lang="en"> <head>
   <meta charset="utf-8">
   <meta name="description" content>
-  <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
   <title>איריס טרוינר - מטפלת באומנות</title>
   
-  <!-- Included CSS Files (Uncompressed) -->
-  <!--
-  <link rel="stylesheet" href="stylesheets/foundation.css">
-  -->
-  
-  <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.css">
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -185,6 +176,8 @@
 						שלוחת אוניברסיטת Lesley בישראל - תואר שני M.A בטיפול באומנות.
 					</a>
 				</li>
+				<li><i class="icon foundicon-checkmark"></i><strong>מטפלת CBT (טיפול קוגניטיבי-התנהגותי)</strong></li>
+				<li><i class="icon foundicon-checkmark"></i>בוגרת התכנית לטיפול זוגי ומשפחתי של מכון ברקאי.</li>
 				<li>
 				<a class="fancybox-effects-c" href="images/homepage/Levinsky.jpg" title='סמינר לוינסקי לחינוך - תואר ראשון B.E.D בחינוך מיוחד.'>
 				<i class="icon foundicon-checkmark"></i>
@@ -231,26 +224,27 @@
 	   </div>
 	  </div>
 	  <h4 class="purpelText">צרו קשר</h4>
-	  <form action="" method="post" id="contact">
+	  
+	  <form action="https://formspree.io/f/xdalrzjk" method="POST" id="contact">
 	  <div class="row">
 		<div class="twelve columns">
 		  <div class="row">
             <div class="twelve columns"><label for="yourName" class="inline alefFont">שם:</label></div>
           </div>
 		  <div class="row">
-			<div class="twelve columns"><input class="rounded" type="text" id="yourName" name="yourName" placeholder="" /></div>
+			<div class="twelve columns"><input class="rounded" type="text" id="yourName" name="yourName" placeholder="" required /></div>
 		  </div>
 		  <div class="row">
             <div class="twelve columns"><label for="phoneNumber" class="inline alefFont">טלפון:</label></div>
           </div>
 		  <div class="row">
-			<div class="twelve columns"><input class="rounded" type="text" id="phoneNumber" placeholder="" name="phoneNumber" /></div>
+			<div class="twelve columns"><input class="rounded" type="text" id="phoneNumber" placeholder="" name="phoneNumber" required /></div>
 		  </div>
 		  <div class="row">
             <div class="twelve columns"><label for="msgContent" class="alefFont">תוכן ההודעה:</label></div>
 		  </div>
 		  <div class="row">
-            <div class="twelve columns"><textarea rows="7" id="msgContent" class="rounded" name="msgContent"></textarea></div>
+            <div class="twelve columns"><textarea rows="7" id="msgContent" class="rounded" name="msgContent" required></textarea></div>
 		  </div>
         
 		  <div class="row">
@@ -283,37 +277,11 @@
   </div>
   
   
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="javascripts/jquery.foundation.forms.js"></script>
-  <script src="javascripts/jquery.event.move.js"></script>
-  <script src="javascripts/jquery.event.swipe.js"></script>
-  <script src="javascripts/jquery.foundation.reveal.js"></script>
-  <script src="javascripts/jquery.foundation.orbit.js"></script>
-  <script src="javascripts/jquery.foundation.navigation.js"></script>
-  <script src="javascripts/jquery.foundation.buttons.js"></script>
-  <script src="javascripts/jquery.foundation.tabs.js"></script>
-  <script src="javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="javascripts/jquery.foundation.accordion.js"></script>
-  <script src="javascripts/jquery.placeholder.js"></script>
-  <script src="javascripts/jquery.foundation.alerts.js"></script>
-  <script src="javascripts/jquery.foundation.topbar.js"></script>
-  <script src="javascripts/jquery.foundation.joyride.js"></script>
-  <script src="javascripts/jquery.foundation.clearing.js"></script>
-  <script src="javascripts/jquery.foundation.magellan.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
   <script src="javascripts/foundation.min.js"></script>
   
-  <!-- Initialize JS Plugins -->
   <script src="javascripts/app.js"></script>
 
-  	<!-- Add fancyBox -->
-	<link rel="stylesheet" href="javascripts/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="javascripts/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
 	<script type="text/javascript" src="javascripts/fancybox/jquery.fancybox.js?v=2.1.4"></script>
 
  
@@ -344,23 +312,7 @@ $(document).ready(function() {
 				}
 			});
 	});
-	
-$('#success').hide();
 
-$('#submit').click(function(){
- 
-	$.post("send.php", $("#contact").serialize(),  function(response) {
-
-	$('#success').empty();
-	$('#success').fadeIn('slow', function() {
-			// Animation complete
-		  });
-	$('#success').html(response);
-	//$('#success').hide('slow');
-	});
-	return false;
-	 
-});
   </script>
 
 
